@@ -10,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         function toggleMenu() {
             const mobileMenuContent = document.getElementById('mobileMenuContent')
@@ -24,6 +25,7 @@
 
 <body>
     <header>
+        <!--responsive for medium device-->
         <div class="hidden md:block">
 
 
@@ -58,6 +60,7 @@
                 </nav>
             </section>
         </div>
+        <!--responsive for small device-->
         <div class="block md:hidden">
             <div class="flex items-center justify-center h-24 justify-between">
                 <div class="logo flex items-center ml-4">
@@ -81,9 +84,229 @@
 
         <!--carousel-->
 
+        <div class="slider max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-5 my-10">
+            <div class="carousel bg-cover">
+
+                <div id="slide1"
+                    class="bg-gradient-to-tr from-gray-700 to-gray-200 carousel-item relative w-full items-center justify-center">
+                    <img src="./images/banner1.png" class="w-full absolute mix-blend-overlay object-cover" />
+
+                    <div class="text text-center items-center">
+                        <h1 class="text-white text-6xl font-bold ">Exotic tastes at your <br>doorstep</h1>
+                        <p class="text-white font-medium text-sm ">We supply highly quality organic products</p>
+                    </div>
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="./images/banner2.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="./images/banner3.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="./images/banner4.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </header>
-    <main>
+    <main class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-2 my-10">
+        <!--deal section-->
+
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full mb-20">
+                    <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Deal of the day</h1>
+                        <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+                            Latin literature from 45 BC,
+                            making it over 2000 years old.</p>
+                    </div>
+                    <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                        <div class="flex flex-col">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:15;"></span>:
+                            </span>
+                            days
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:10;"></span>:
+                            </span>
+                            hours
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:24;"></span>:
+                            </span>
+                            min
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:48;"></span>
+                            </span>
+                            sec
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex flex-wrap -m-4">
+
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="card-body items-center text-center">
+                            <img src="./images/fruit6.png" alt="">
+                            <h2 class="card-title">12.90$ - 18.85$</h2>
+                            <p>Appels</p>
+                            <div class="card-actions">
+                                <button class="btn text-red-400" onclick="my_modal_3.showModal()">Detail</button>
+                                <dialog id="my_modal_3" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <button
+                                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        <img src="./images/fruit8.png" alt="">
+                                        <h3 class="font-bold text-lg">Red Dragons</h3>
+                                        <p class="py-4">You can try this</p>
+                                        <button class="btn">Buy Now</button>
+                                        <button class="btn">close</button>
+                                    </form>
+                                </dialog>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="card-body items-center text-center">
+                            <img src="./images/fruit7.png" alt="">
+                            <h2 class="card-title">12.90$ - 18.85$</h2>
+                            <p>Oranges</p>
+                            <div class="card-actions">
+                                <button class="btn text-red-400" onclick="my_modal_3.showModal()">Detail</button>
+                                <dialog id="my_modal_3" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <button
+                                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        <img src="./images/fruit8.png" alt="">
+                                        <h3 class="font-bold text-lg">Red Dragons</h3>
+                                        <p class="py-4">You can try this</p>
+                                        <button class="btn">Buy Now</button>
+                                        <button class="btn">close</button>
+                                    </form>
+                                </dialog>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="card-body items-center text-center">
+                            <img src="./images/fruit8.png" alt="">
+                            <h3 class="card-title">12.90$ - 18.85$
+                            </h3>
+                            <p class="leading-relaxed text-base">Red Dragons</p>
+                            <div class="card-actions">
+                                <button class="btn text-red-400" onclick="my_modal_3.showModal()">Detail</button>
+                                <dialog id="my_modal_3" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <button
+                                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        <img src="./images/fruit8.png" alt="">
+                                        <h3 class="font-bold text-lg">Red Dragons</h3>
+                                        <p class="py-4">You can try this</p>
+                                        <button class="btn">Buy Now</button>
+                                        <button class="btn">close</button>
+                                    </form>
+                                </dialog>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4">
+                        <div class="card-body items-center text-center">
+                            <img src="./images/fruit9.png" alt="">
+                            <h3 class="card-title">12.90$ - 18.85$
+                            </h3>
+                            <p class="leading-relaxed text-base">Bananas</p>
+                            <div class="card-actions">
+                                <button class="btn text-red-400" onclick="my_modal_3.showModal()">Detail</button>
+                                <dialog id="my_modal_3" class="modal">
+                                    <form method="dialog" class="modal-box">
+                                        <button
+                                            class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        <img src="./images/fruit8.png" alt="">
+                                        <h3 class="font-bold text-lg">Red Dragons</h3>
+                                        <p class="py-4">You can try this</p>
+                                        <button class="btn">Buy Now</button>
+                                        <button class="btn">close</button>
+                                    </form>
+                                </dialog>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn bg-red-400 text-white justify-center">Shop All</button>
+        </section>
+        <!--team section-->
+        <section class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 py-2 my-10 bg-cover">
+            <div class="hero min-h-screen" style="background-image: url(./images/team.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-md">
+
+                        <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
+                        <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece
+                            of classical Latin literature from 45 BC,
+                            making it over 2000 years old.</p>
+                        <div class="gap-10 grid grid-cols-4">
+                            <div class="items-center justify-center">
+                                <figure><img src="./images/member1.png" alt="" />
+                                    <h2>Awlad Hossain</h2>
+                                </figure>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="">
+                                <figure><img src="./images/member2.png" alt="" />
+                                    <h2 class="">Safia Chowdhury</h2>
+                                </figure>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="">
+                                <figure><img src="./images/member3.png" alt="" />
+                                    <h2>Rokib Hossain</h2>
+                                </figure>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+                            <div class="">
+                                <figure><img src="./images/member4.png" alt="" />
+                                    <h2>Chaity</h2>
+                                </figure>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
     <footer>
